@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negão Fragrâncias - Sua loja de perfumes online</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ícones do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#5c2a91">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+
+
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="top-bar-info">
+                <span>Frete grátis para compras acima de R$ 199,90</span>
+            </div>
+            <div class="top-bar-links">
+                <a href="#">Quem Somos</a>
+                <a href="#">Consultora</a>
+                <a href="#">Ajuda</a>
+                <a href="#">Onde Comprar</a>
+            </div>
+        </div>
+        <div class="main-header">
+            <a href="#" class="logo">Negão Fragrancias</a>
+            <div class="search-bar">
+                <input type="text" placeholder="O que você procura?">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="#">
+                    <i class="far fa-user"></i>
+                    <span>Minha Conta</span>
+                </a>
+                <a href="#">
+                    <i class="far fa-heart"></i>
+                    <span>Favoritos</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Carrinho</span>
+                </a>
+            </div>
+        </div>
+        <nav class="main-navigation">
+    <!-- Mobile Toggle -->
+    <div class="nav-header">
+        <div class="nav-title">Categorias</div>
+        <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    
+    <ul id="mainMenu">
+        <li><a href="PerfumesF.html"><i class="fas fa-female"></i>Perfumes Femininos</a></li>
+        <li><a href="PerfumesM.html"><i class="fas fa-male"></i>Perfumes Masculinos</a></li>
+        <li><a href="PerfumesU.html"><i class="fas fa-venus-mars"></i>Perfumes Unissex</a></li>
+        <li><a href="kits.html"><i class="fas fa-gift"></i>Kits de Presente</a></li>
+        <li><a href="Qsomos.html"><i class="fas fa-star"></i>Lançamentos</a></li>
+        <li><a href="Promocoes.html"><i class="fas fa-tags"></i>Promoções</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="category-image" style="background-image: url('/Perfumes/dilao1.jpg')"></div>
+            <h1>Descubra seu perfume ideal</h1>
+            <p>Fragrâncias exclusivas que transmitem sua personalidade e marcam momentos inesquecíveis.</p>
+            <a href="#" class="btn">Ver coleção</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section">
+        <div class="section-title">
+            <h2>Nossos Perfumes</h2>
+        </div>
+        <div class="categories">
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('/Perfumes/urco1.jpg')"></div>
+                <div class="category-content">
+                    <h3>Perfumes Femininos</h3>
+                    <a href="#" class="btn">Ver mais</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('/Perfumes/fofo1.jpg')"></div>
+                <div class="category-content">
+                    <h3>Perfumes Masculinos</h3>
+                    <a href="#" class="btn">Ver mais</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('/Perfumes/pinguim1.jpg')"></div>
+         
+                <div class="category-content">
+                    <h3>Perfumes Unissex</h3>
+                    <a href="#" class="btn">Ver mais</a>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('/Perfumes/jujo1.jpg')"></div>
+                <div class="category-content">
+                    <h3>Kits de Presente</h3>
+                    <a href="#" class="btn">Ver mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+// Script para navegação responsiva
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Menu mobile toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mainMenu = document.getElementById('mainMenu');
+    
+    if (mobileToggle && mainMenu) {
+        mobileToggle.addEventListener('click', function() {
+            mainMenu.classList.toggle('show');
+            
+            // Alternar ícone
+            const icon = mobileToggle.querySelector('i');
+            if (icon) {
+                if (mainMenu.classList.contains('show')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+    }
+    
+    // Fechar menu ao clicar fora
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('nav.main-navigation') && mainMenu && mainMenu.classList.contains('show')) {
+            mainMenu.classList.remove('show');
+            
+            // Restaurar ícone
+            const icon = mobileToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    });
+    
+    // Fechar menu ao redimensionar acima de 768px
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && mainMenu && mainMenu.classList.contains('show')) {
+            mainMenu.classList.remove('show');
+            
+            // Restaurar ícone
+            const icon = mobileToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    });
+});
+</script>
+
+    <!-- Products -->
+    <section class="products-section">
+        <div class="section-title">
+            <h2>Nossos Destaques</h2>
+        </div>
+        <div class="products">
+            <div class="product-row">
+                <div class="product-card">
+                    <div class="product-badge">Lançamento</div>
+                    <div class="product-image">
+                        <img src="/Perfumes/01.jpg" alt="Perfume Floral">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Cuxao lorota</h3>
+                        <p class="product-description">Cheiro de Peido e de Chubasa. Cuxao lorota veio para derrubar a Avon</p>
+                        <div class="product-price">
+                            <span class="current-price">R$ 129,90</span>
+                            <span class="old-price">R$ 159,90</span>
+                            <span class="discount">-19%</span>
+                        </div>
+                        <p class="installments">ou 6x de R$ 21,65 sem juros</p>
+                        <button class="add-to-cart">Adicionar à sacola</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/Perfumes/dilao1.jpg" alt="Perfume Amadeirado">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Wood Essence</h3>
+                        <p class="product-description">Notas amadeiradas intensas para homens modernos e sofisticados.</p>
+                        <div class="product-price">
+                            <span class="current-price">R$ 149,90</span>
+                        </div>
+                        <p class="installments">ou 6x de R$ 24,98 sem juros</p>
+                        <button class="add-to-cart">Adicionar à sacola</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">Oferta</div>
+                    <div class="product-image">
+                        <img src="/Perfumes/cr71.png" alt="Perfume Cítrico">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Citrus Fresh</h3>
+                        <p class="product-description">Fragrância cítrica refrescante para o dia a dia.</p>
+                        <div class="product-price">
+                            <span class="current-price">R$ 89,90</span>
+                            <span class="old-price">R$ 119,90</span>
+                            <span class="discount">-25%</span>
+                        </div>
+                        <p class="installments">ou 5x de R$ 17,98 sem juros</p>
+                        <button class="add-to-cart">Adicionar à sacola</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/Perfumes/bozo1.jpg" alt="Perfume Oriental">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Mystic Peido</h3>
+                        <p class="product-description">Uma fragrância sabor maracujá. Diretamente dos ares do Parque de Rodeio </p>
+                        <div class="product-price">
+                            <span class="current-price">R$ 179,90</span>
+                        </div>
+                        <p class="installments">ou 6x de R$ 29,98 sem juros</p>
+                        <button class="add-to-cart">Adicionar à sacola</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">Exclusivo</div>
+                    <div class="product-image">
+                        <img src="/Perfumes/money1.jpg" alt="Perfume Gourmand">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Splash Tio Da Van</h3>
+                        <p class="product-description">Fragrância inspirada no meliante Buco vulgo Boquete.</p>
+                        <div class="product-price">
+                            <span class="current-price">R$ 159,90</span>
+                        </div>
+                        <p class="installments">ou 6x de R$ 26,65 sem juros</p>
+                        <button class="add-to-cart">Adicionar à sacola</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">Mais Vendido</div>
+                    <div class="product-image">
+                        <img src="/Perfumes/conrado1.jpg" alt="Perfume Frutal">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Novo Negão</h3>
+                        <p class="product-description">Fragrância frutal com notas vibrantes de frutas vermelhas.</p>
+                        <div class="product-price">
+                            <span class="current-price">R$ 139,90</span>
+                            <span class="old-price">R$ 169,90</span>
+                            <span class="discount">-18%</span>
+                        </div>
+                        <p class="installments">ou 6x de R$ 23,32 sem juros</p>
+                        <button class="add-to-cart">Adicionar à sacola</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/Perfumes/kevin1.jpg" alt="Perfume Aquático">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Moia Tanga</h3>
+                        <p class="product-description">Fragrância aquática inspirada na brisa do mar.</p>
+                        <div class="product-price">
+                            <span class="current-price">R$ 129,90</span>
+                        </div>
+                        <p class="installments">ou 6x de R$ 21,65 sem juros</p>
+                        <button class="add-to-cart">Adicionar à sacola</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/Perfumes/aiai1.jpg" alt="Perfume Especiado">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Spicy Elegance</h3>
+                        <p class="product-description">Fragrância especiada e elegante para noites especiais.</p>
+                        <div class="product-price">
+                            <span class="current-price">R$ 169,90</span>
+                        </div>
+                        <p class="installments">ou 6x de R$ 28,32 sem juros</p>
+                        <button class="add-to-cart">Adicionar à sacola</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="offers">
+        <div class="offer-content">
+            <div class="offer-text">
+                <h2>Perfumes Exclusivos</h2>
+                <p>Descubra nossa coleção exclusiva de perfumes importados. Fragrâncias únicas e sofisticadas para pessoas exigentes que buscam qualidade e exclusividade.</p>
+                <a href="#" class="btn">Ver coleção</a>
+            </div>
+            <div class="
